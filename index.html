@@ -10,7 +10,6 @@
         <link rel="stylesheet" href="css/L.Control.Layers.Tree.css">
         <link rel="stylesheet" href="css/qgis2web.css">
         <link rel="stylesheet" href="css/fontawesome-all.min.css">
-        <link rel="stylesheet" href="css/leaflet-search.css">
         <link rel="stylesheet" href="css/leaflet.photon.css">
         <style>
         html, body, #map {
@@ -36,7 +35,6 @@
         <script src="js/labelgun.min.js"></script>
         <script src="js/labels.js"></script>
         <script src="js/leaflet.photon.js"></script>
-        <script src="js/leaflet-search.js"></script>
         <script src="data/Dpartement_Sarthe_1.js"></script>
         <script src="data/Iris_LeMans_2.js"></script>
         <script src="data/Communesdesserviesaidealimentaire_3.js"></script>
@@ -3311,7 +3309,7 @@
             {label: '<img src="legend/Communesdesserviesaidealimentaire_16.png" />  Communes-desservies-aide-alimentaire', layer: layer_Communesdesserviesaidealimentaire_16},
             {label: '<img src="legend/Iris_LeMans_15.png" /> Iris_Le Mans', layer: layer_Iris_LeMans_15},
             {label: '<img src="legend/Dpartement_Sarthe_14.png" /> Département_Sarthe', layer: layer_Dpartement_Sarthe_14},]},
-        {label: '<b>2023</b>',  selectAllCheckbox: true, children: [
+        {label: '<b>2023</b>', collapsed: true, selectAllCheckbox: true, children: [
             {label: '<img src="legend/Associationspartenaires_BA72_13.png" /> Associations partenaires _BA72 ', layer: layer_Associationspartenaires_BA72_13},
             {label: 'Personnes accueillies_assos_2023<br /><table><tr><td style="text-align: center;"><img src="legend/Personnesaccueillies_assos_2023_12_1800.png" /></td><td>1 - 80</td></tr><tr><td style="text-align: center;"><img src="legend/Personnesaccueillies_assos_2023_12_803101.png" /></td><td>80 - 310</td></tr><tr><td style="text-align: center;"><img src="legend/Personnesaccueillies_assos_2023_12_3108002.png" /></td><td>310 - 800</td></tr><tr><td style="text-align: center;"><img src="legend/Personnesaccueillies_assos_2023_12_80016003.png" /></td><td>800 - 1600</td></tr><tr><td style="text-align: center;"><img src="legend/Personnesaccueillies_assos_2023_12_160022304.png" /></td><td>1600 - 2230</td></tr></table>', layer: layer_Personnesaccueillies_assos_2023_12},
             {label: 'Tonnage_assos_2023<br /><table><tr><td style="text-align: center;"><img src="legend/Tonnage_assos_2023_11_2850000.png" /></td><td>28 - 5000</td></tr><tr><td style="text-align: center;"><img src="legend/Tonnage_assos_2023_11_5000150001.png" /></td><td>5000 - 15000</td></tr><tr><td style="text-align: center;"><img src="legend/Tonnage_assos_2023_11_15000350002.png" /></td><td>15000 - 35000</td></tr><tr><td style="text-align: center;"><img src="legend/Tonnage_assos_2023_11_350001050003.png" /></td><td>35000 - 105000</td></tr><tr><td style="text-align: center;"><img src="legend/Tonnage_assos_2023_11_1050001400004.png" /></td><td>105000 - 140000</td></tr></table>', layer: layer_Tonnage_assos_2023_11},
@@ -3387,16 +3385,6 @@
             }  
         });       
         setBounds();
-        map.addControl(new L.Control.Search({
-            layer: layer_Communes_31,
-            initial: false,
-            hideMarkerOnCollapse: true,
-            propertyName: 'libgeo'}));
-        if (typeof url === 'undefined') {
-            document.getElementsByClassName('search-button')[0].className += ' fa fa-binoculars';
-        } else {
-            document.getElementsByClassName('search-button')[1].className += ' fa fa-binoculars';
-        }
         </script>        
     </body>
 </html>
